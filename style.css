@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 50%, #fce7f3 100%);
+    color: #1f2937;
+}
+
+/* 좌측 상단 로고 */
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+}
+
+.sdu-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sdu-text {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+}
+
+/* 우측 상단 날씨 */
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    display: flex;
+    gap: 10px;
+}
+
+.weather-widget {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+}
+
+/* 중앙 영역 */
+.center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 40px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.clock {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #4b5563;
+}
+
+.search-box {
+    margin-top: 32px;
+    display: flex;
+    width: 100%;
+    max-width: 560px;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px 24px;
+    font-size: 16px;
+}
+
+.search-box button {
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    padding: 0 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.buttons button {
+    border: none;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.quote {
+    margin-top: 40px;
+    max-width: 560px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #374151;
+    font-style: italic;
+}
+
+.quote span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #6b7280;
+    font-style: normal;
+}
+
+/* 모바일 */
+@media (max-width: 640px) {
+    .top-left, .top-right {
+        position: static;
+        justify-content: center;
+        margin: 14px auto 0;
+        text-align: center;
+    }
+    .top-left { display: flex; justify-content: center; }
+    .center { min-height: auto; padding-top: 40px; }
+    .title { font-size: 34px; }
+}

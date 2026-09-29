@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 시작 홈페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-left">
+        <a href="https://www.sdu.ac.kr/" target="_blank" class="sdu-logo-link">
+            <span class="sdu-text">SDU</span> 서울디지털대학교
+        </a>
+    </div>
+
+    <div class="top-right">
+        <div id="weather-seoul" class="weather-widget">서울 날씨 로딩중...</div>
+        <div id="weather-jeju" class="weather-widget">제주 날씨 로딩중...</div>
+    </div>
+
+    <main class="center">
+        <h1 class="title">My Start Page</h1>
+        <p id="clock" class="clock"></p>
+
+        <form class="search-box" action="https://www.google.com/search" method="GET" target="_blank">
+            <input type="text" name="q" placeholder="Google에서 검색하기" autocomplete="off" required>
+            <button type="submit">검색</button>
+        </form>
+
+        <div class="buttons">
+            <button type="button" id="lucky-btn">I'm Feeling Lucky</button>
+            <button type="button" id="quote-btn">새 명언 보기</button>
+        </div>
+
+        <blockquote id="quote" class="quote"></blockquote>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
